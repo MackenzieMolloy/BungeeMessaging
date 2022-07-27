@@ -6,6 +6,7 @@ import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;
 import net.md_5.bungee.config.YamlConfiguration;
+import org.bukkit.Bukkit;
 
 import java.io.File;
 import java.io.IOException;
@@ -127,8 +128,9 @@ public class PlayerManager {
     }
 
     public String getUUIDFromUsername(String playerName) {
+        ProxiedPlayer player = ProxyServer.getInstance().getPlayer(playerName);
+        if(player != null) return player.getUniqueId().toString();
         File playersCache = getPlayerCacheFile();
-
         try {
             Configuration storedData = ConfigurationProvider.getProvider(YamlConfiguration.class).load(new File(Main.instance.getDataFolder(), playersCache.getName()));
             for (String key : storedData.getKeys()) {
@@ -136,7 +138,21 @@ public class PlayerManager {
             }
         }
         catch (IOException e) { e.printStackTrace(); }
+        return null;
+    }
 
+    public String getNameFromString(String playerName) {
+        ProxiedPlayer player = ProxyServer.getInstance().getPlayer(playerName);
+        if(player != null) return player.getDisplayName();
+
+        File playersCache = getPlayerCacheFile();
+        try {
+            Configuration storedData = ConfigurationProvider.getProvider(YamlConfiguration.class).load(new File(Main.instance.getDataFolder(), playersCache.getName()));
+            for (String key : storedData.getKeys()) {
+                if (storedData.getString(key).equalsIgnoreCase(playerName)) return storedData.getString(key);
+            }
+        }
+        catch (IOException e) { e.printStackTrace(); }
         return null;
     }
 

@@ -6,7 +6,7 @@
 #                                                #
 ##################################################
 
-Prefix: '&e&lCozyMC &f&l» '
+Prefix: '&e&lNetwork &f&l» '
 Player_Offline: '&7That player not is online.'
 No_Permission: '&7You dont have permission.'
 
@@ -81,3 +81,5 @@ Ignore_User_Ignored: "&f%player% &7has been added to your ignore list, they can 
 Ignore_User_No_Longer_Ignored: "&f%player% &7has been removed from your ignore list, they can now message you."
 Ignore_Error_Unignoring_Player: "&7An error has occured when trying to remove &f%player% &7from your ignore list, please try again later or contact a network admin."
 Ignore_Error_Ignoring_Player: "&7An error has occured when trying to ignore &f%player%&7, please try again later or contact a network admin."
+Ignore_Already_Ignoring: "&7You already have &f%player%&7 on your ignore list."
+Ignore_Not_Ignoring: "&7You don't have &f%player% &7on your ignore list."
