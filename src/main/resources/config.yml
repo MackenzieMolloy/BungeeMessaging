@@ -1,0 +1,83 @@
+##################################################
+#                                                #
+#          BUNGEECORD MESSAGE PLUGIN             #
+#       - Originally by: @iFedeFC (Spigot)       #
+#       - Forked by: Mackenzie Molloy#1821       #
+#                                                #
+##################################################
+
+Prefix: '&e&lCozyMC &f&l» '
+Player_Offline: '&7That player not is online.'
+No_Permission: '&7You dont have permission.'
+
+# Format variables:
+# - %sender-name%
+# - %sender-server%
+# - %sender-prefix%
+# - %receiver-name%
+# - %receiver-server%
+# - %receiver-prefix%
+# - %msg%
+
+Message_Cooldown: 3
+Message_Cooldown_Wait: "&7Please wait &f%time% seconds &7before messaging someone again."
+Message_Usage: '&7Incorrect usage, please use &f/msg (player) (message)&7.'
+Message_Sender_Ignored: "&f%player% &7has their messages &cdisabled&7, sorry."
+Sender_Format: '&e✉ &7To %receiver-prefix%%receiver-name% &8➟ &f%msg%'
+Receiver_Format: '&e✉ &7From %sender-prefix%%sender-name% &8➟ &f%msg%'
+Reply_Usage: '&7Incorrect usage, please use &f/reply (message) &7or &f/r (message)&7.'
+No_Player_Reply: '&7You dont have any player to reply.'
+No_Message_Yourself: '&7You can not send a message to yourself.'
+No_Reply_Permission: '&7You dont have permission to reply to that message.'
+
+
+StaffChat_Enabled: false
+StaffChat_Disabled: '&cSorry, but this function is disabled'
+StaffChat_Format: '&6[STAFF CHAT] &7[%server%] %sender-prefix% &6%player%: &b%msg%'
+Staff_Chat_Off: '&cYou left the chat staff!'
+Staff_Chat_On: '&aNow you are in staff chat mode!'
+
+
+SocialSpy_Off: '&7Your social spy has been &cdeactivated&7.'
+SocialSpy_On: '&7Your social spy has been &aactivated&7. &8(%state%)'
+SocialSpy_Change: '&7Your social spy has been changed to &f%state%&7.'
+SocialSpy_Local: 'local'
+SocialSpy_Global: 'global'
+SocialSpy_Format: '&c(SPY) %sender-prefix%%sender% &7to %receiver-prefix%%receiver%&7: &e%msg%'
+
+
+HelpOp_Enabled: true
+HelpOp_Disabled: '&cSorry, but this function is disabled'
+#Time in seconds
+HelpOp_Cooldown: 60
+HelpOp_Cooldown_Wait: '&7Please wait &f%time% seconds &7before using that command again.'
+HelpOp_Format: '&a&lHELP REQUEST! &e(%server%) %sender-prefix%%player%&7: &e%msg%'
+HelpOp_Sended: "&7Your message has been &fsent&7 to all online staff members, please wait for a response. &7Should there be no staff online, consider creating a ticket on Discord."
+HelpOp_Usage: "&7Incorrect usage, please use &f/helpop (message)&7."
+
+
+BroadCast_Enabled: true
+BroadCast_Disabled: '&cSorry, but this function is disabled'
+#Time in seconds
+BroadCast_Cooldown: 20
+BroadCast_Cooldown_Wait: '&cYou must wait %time% to use the broadcast again'
+BroadCast_Format: "\n&f%msg%\n"
+BroadCast_Sended: '&aThe broadcast has been sent correctly'
+BroadCast_Usage: '&7Usage: /bc <msg>'
+
+ToggleMessage_Cooldown: 3
+ToggleMessage_Cooldown_Wait: '&7Please wait &f%time% seconds &7before toggling your messages again.'
+
+Messages_Disabled: '&f%player% &7has their messages &cdisabled&7, sorry.'
+ReceiveMessages_Enabled: '&7You have &aenabled&7 your direct messages.'
+ReceiveMessages_Disabled: '&7You have &cdisabled&7 your direct messages.'
+
+Ignore_Cooldown: 3
+Ingore_Cooldown_Wait: "&7Please wait &f%time% seconds &7before ignoring someone again."
+Ignore_Usage: "&7Incorrect usage, please use &f/ignore (player) &7or &f/ignorelist&7."
+Ignore_Player_Not_Found: "&7Sorry, a player by the name of &f%player%&7 couldn't be found. Please check the spelling or try again later."
+Ignore_No_Permission: "&7You don't have permission to ignore players."
+Ignore_User_Ignored: "&f%player% &7has been added to your ignore list, they can now no-longer message you. Run &f/ignore %player%&7 again to remove them from your ignore list."
+Ignore_User_No_Longer_Ignored: "&f%player% &7has been removed from your ignore list, they can now message you."
+Ignore_Error_Unignoring_Player: "&7An error has occured when trying to remove &f%player% &7from your ignore list, please try again later or contact a network admin."
+Ignore_Error_Ignoring_Player: "&7An error has occured when trying to ignore &f%player%&7, please try again later or contact a network admin."
